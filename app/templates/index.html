@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container">
-        <h1>Hello {{user.full_name}}</h1>
-        <p>
-            Your username is {{user.username}}
-        </p>
-    </div>
+    <h2>Word Counter</h2>
+    <hr>
+    {% include  "includes/counter-form.html" %}
+    Word Count: {{ phrase_length }}
+    <br>
+    Character count: {{ char_length }}
 {% endblock %}

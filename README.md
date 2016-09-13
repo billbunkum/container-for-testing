@@ -1,9 +1,7 @@
-# Flask Package
-
-Create a flask app as a package and a run script to actually run the application
+#Word Counter Flask
 
 ## Setup
-* `mkvirtualenv -p python3 flask-package`
+* `mkvirtualenv -p python3 word-counter`
 * `pip install -r requirements.txt`
 
 ## Run the flask app
