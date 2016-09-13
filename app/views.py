@@ -9,6 +9,7 @@ def index():
 	word_count = WordCount(request.form)
 
 	word_list = []
+	char_list = []
 	phrase_length = 0
 	char_length = 0
 	max_key = ""
@@ -26,8 +27,9 @@ def index():
 		counter_dict = Counter(word_list)
 		
 		max_value = max(counter_dict.values())
-		#if max_value == counter_dict.values():
-		#	max_key = counter_dict.keys()
+		for key, value in counter_dict.items():
+			if value == max_value:
+				max_key = key
 
 
-	return render_template("index.html", word_count=word_count, phrase_length=phrase_length, char_length=char_length)
+	return render_template("index.html", word_count=word_count, phrase_length=phrase_length, char_length=char_length, max_key=max_key)
