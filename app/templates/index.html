@@ -3,8 +3,11 @@
 {% block content %}
     <h2>Word Counter</h2>
     <hr>
-    {% include  "includes/counter-form.html" %}
+    {% include "includes/counter-form.html" %}
     Word Count: {{ phrase_length }}
     <br>
     Character count: {{ char_length }}
+    <br>
+    Most Frequent Word: 
+
 {% endblock %}
