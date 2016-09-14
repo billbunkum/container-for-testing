@@ -19,4 +19,4 @@ def index():
 		max_key = good_stuff.common_word(word_count)
 		frequent_letter = good_stuff.common_char(word_count)
 
-	return render_template("index.html", word_count=word_count, phrase_length=phrase_length, char_length=char_length, max_key=max_key, frequent_letter=frequent_letter)
+	return render_template("index.html", good_stuff=good_stuff, word_count=word_count)

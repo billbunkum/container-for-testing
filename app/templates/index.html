@@ -4,12 +4,12 @@
     <h2>Word Counter</h2>
     <hr>
     {% include "includes/counter-form.html" %}
-    Word Count: {{ phrase_length }}
+    Word Count: {{ good_stuff.phrase_length }}
     <br>
-    Character count: {{ char_length }}
+    Character count: {{ good_stuff.char_length }}
     <br>
-    Most Frequent Word: {{ max_key }}
+    Most Frequent Word: {{ good_stuff.max_key }}
     <br>
-    Most Frequent Letter: {{ frequent_letter }}
+    Most Frequent Letter: {{ good_stuff.frequent_letter }}
 
 {% endblock %}
