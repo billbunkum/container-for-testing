@@ -7,10 +7,12 @@ from app.good_file import GoodFile
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+	return render_template("index.html")
+
+@app.route("/word-counter", methods=["GET", "POST"])
+def word_counter():
 	word_count = WordCount(request.form)
 	good_stuff = GoodFile()
-
-#sets initial value for variables
 
 #'if' protects for shitty empty form
 	if request.method == "POST" and word_count.validate():
@@ -19,4 +21,8 @@ def index():
 		max_key = good_stuff.common_word(word_count)
 		frequent_letter = good_stuff.common_char(word_count)
 
-	return render_template("index.html", good_stuff=good_stuff, word_count=word_count)
+	return render_template("word-counter.html", good_stuff=good_stuff, word_count=word_count)
+
+@app.route("/times-table")
+def times_table():
+	return render_template("times-table.html")

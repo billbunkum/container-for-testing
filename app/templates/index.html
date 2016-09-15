@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Word Counter</h2>
+    <h2>The One (Swiss) Counter to rule them all</h2>
     <hr>
-    {% include "includes/counter-form.html" %}
-    Word Count: {{ good_stuff.phrase_length }}
-    <br>
-    Character count: {{ good_stuff.char_length }}
-    <br>
-    Most Frequent Word: {{ good_stuff.max_key }}
-    <br>
-    Most Frequent Letter: {{ good_stuff.frequent_letter }}
-
+    <ul>
+        <li><a href="{{ url_for('word_counter') }}">Word Counter (and more)</a>
+            </li>
+        <li><a href="{{ url_for('times_table') }}">Times Table (and little more)</a>
+            </li>
+    </ul>
 {% endblock %}

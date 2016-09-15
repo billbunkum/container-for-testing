@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Word Counter</h2>
+    <hr>
+    {% include "includes/counter-form.html" %}
+    Word Count: {{ good_stuff.phrase_length }}
+    <br>
+    Character count: {{ good_stuff.char_length }}
+    <br>
+    Most Frequent Word: {{ good_stuff.max_key }}
+    <br>
+    Most Frequent Letter: {{ good_stuff.frequent_letter }}
+{% endblock %}
